@@ -1,1 +1,1 @@
-![photo_2025-05-21_12-36-42](https://github.com/user-attachments/assets/3ad9789e-3a6e-4581-b836-6087bd0a7d32)![photo_2025-05-21_12-36-42](https://github.com/user-attachments/assets/b89339d0-04af-4f12-9b87-75c7c688ab60)
+![Uploading photo_2025-05-21_12-36-42.jpg…]()
