@@ -6,6 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    Hello from laravel
+    <nav>
+        Salakin
+    </nav>
+    <section>
+        <div class=" photo-container">
+            
+        </div>
+        <div>
+            My name is salakin
+        </div>
+        <div>
+            
+        </div>
+        <div>
+            my project
+        </div>
+</section>    
 </body>
 </html>
