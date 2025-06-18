@@ -9,6 +9,13 @@ for (let i = 0; i < tags.length; i++) {
 
 document.querySelectorAll(".title").forEach((abc) => {
     abc.onclick = function () {
-        prompt(this.innerText);
+        this.innerHTML = `
+            <h3><a href="#">This is by JS</a></h3>
+            <p>This is assigned dynamically</p>
+        `;
+        this.style.color = "yellow";
+        this.style.backgroundColor = "#000000";
+        this.style.borderRadius = "10px";
+        this.style.padding = "20px";
     };
 });
