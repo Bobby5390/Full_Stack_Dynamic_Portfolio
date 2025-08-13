@@ -420,16 +420,8 @@
         I'm a passionate and dedicated web developer. I love creating clean, responsive websites using HTML, CSS, JavaScript, PHP, and more. Always learning. Always building.</p>
     </div>
 
-    <footer>
-        <div class="footer-social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">GitHub</a>
-            <a href="#">Telegram</a>
-            <a href="#">WhatsApp</a>
-        </div>
-        &copy; 2025 Sirajes Salakin. All rights reserved.
-    </footer>
+
+    @include('components.footer')
 
 </body>
 </html>

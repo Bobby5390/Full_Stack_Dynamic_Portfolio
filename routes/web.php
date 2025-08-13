@@ -33,10 +33,21 @@ Route::post('/login', [AuthenticationController::class, 'login'])->name('login.s
 Route::post('/register', [AuthenticationController::class, 'register'])->name('register.submit');
 Route::post('/logout', [AuthenticationController::class, 'logout'])->name('logout');
 
-// Admin Dashboard Routes (Protected by Auth Middleware)
+
+// Admin Dashboard & CRUD Routes (Protected by Auth Middleware)
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
     Route::get('/analytics', [DashboardController::class, 'analytics'])->name('admin.analytics');
+
+    // CRUD routes for portfolio sections
+    Route::resource('projects', App\Http\Controllers\ProjectsController::class);
+    Route::resource('skills', App\Http\Controllers\SkillsController::class);
+    Route::resource('educations', App\Http\Controllers\EducationsController::class);
+    Route::resource('achievements', App\Http\Controllers\AchievementsController::class);
+    Route::resource('experiences', App\Http\Controllers\ExperiencesController::class);
+    Route::resource('personal-details', App\Http\Controllers\PersonalDetailsController::class);
+    Route::resource('infos', App\Http\Controllers\InfosController::class);
+    Route::resource('users', App\Http\Controllers\UserController::class);
 });
 
