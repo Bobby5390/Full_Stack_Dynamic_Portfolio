@@ -690,7 +690,7 @@
             <div class="sidebar-header">
                 <a href="/" class="logo">
                     <i class="fas fa-rocket"></i>
-                    Portfolio Pro
+                    Portfolio Settings
                 </a>
             </div>
             

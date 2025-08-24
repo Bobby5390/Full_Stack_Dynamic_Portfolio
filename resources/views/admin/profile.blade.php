@@ -14,40 +14,50 @@
     }
     .profile-glass-bg::before {
         content: '';
-        position: absolute;
-        top: -100px; left: -100px;
-        width: 400px; height: 400px;
-        background: radial-gradient(circle, #00fff7 0%, transparent 70%);
-        opacity: 0.18;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: 
+            radial-gradient(circle at 20% 50%, rgba(0, 188, 212, 0.08) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.06) 0%, transparent 50%),
+            radial-gradient(circle at 40% 80%, rgba(0, 188, 212, 0.08) 0%, transparent 50%);
+        animation: backgroundShift 15s ease-in-out infinite;
+        pointer-events: none;
         z-index: 0;
-        filter: blur(10px);
     }
-    .profile-glass-bg::after {
-        content: '';
-        position: absolute;
-        bottom: -120px; right: -120px;
-        width: 500px; height: 500px;
-        background: radial-gradient(circle, #2d4df1 0%, transparent 70%);
-        opacity: 0.13;
-        z-index: 0;
-        filter: blur(10px);
+    @keyframes backgroundShift {
+        0%, 100% {
+            transform: translateX(0) translateY(0) scale(1);
+            opacity: 0.4;
+        }
+        50% {
+            transform: translateX(10px) translateY(-20px) scale(1.05);
+            opacity: 0.6;
+        }
     }
     .profile-settings-card {
         border-radius: 24px;
-        box-shadow: 0 8px 40px 0 rgba(0,255,255,0.10), 0 1.5px 8px 0 rgba(0,0,0,0.18);
-        background: rgba(28, 28, 28, 0.85);
+        background: rgba(28, 28, 28, 0.90);
         backdrop-filter: blur(18px) saturate(140%);
-        border: 1.5px solid rgba(0,255,255,0.18);
+        border: 2px solid #00fff7;
         padding: 2.5rem 2rem 2rem 2rem;
         max-width: 500px;
         margin: 0 auto;
         color: #f0f0f0;
         position: relative;
         z-index: 1;
-        transition: box-shadow 0.2s;
+        box-shadow: 0 0 32px 0 rgba(0,255,255,0.10);
+        animation: cardFloat 3s ease-in-out infinite alternate, cardGlow 2.5s ease-in-out infinite alternate;
     }
-    .profile-settings-card:hover {
-        box-shadow: 0 12px 60px 0 rgba(0,255,255,0.18), 0 2px 12px 0 rgba(0,0,0,0.22);
+    @keyframes cardFloat {
+        from { transform: translateY(0px); }
+        to { transform: translateY(-7px); }
+    }
+    @keyframes cardGlow {
+        from { box-shadow: 0 0 32px 0 rgba(0,255,255,0.10); }
+        to { box-shadow: 0 0 48px 0 rgba(0,255,255,0.22), 0 0 0 4px rgba(0,255,255,0.08); }
     }
     .profile-img {
         width: 120px;
@@ -56,9 +66,14 @@
         object-fit: cover;
         margin-bottom: 1rem;
         background: linear-gradient(135deg, #2d4df1 0%, #00fff7 100%);
-        box-shadow: 0 0 32px 0 rgba(0,255,255,0.18);
         border: 3px solid #00fff7;
+        box-shadow: 0 0 32px 0 rgba(0,255,255,0.18);
         transition: border 0.2s;
+        animation: avatarPulse 2.2s infinite alternate;
+    }
+    @keyframes avatarPulse {
+        from { box-shadow: 0 0 32px 0 rgba(0,255,255,0.18); }
+        to { box-shadow: 0 0 48px 0 rgba(0,255,255,0.32); }
     }
     .profile-img:hover {
         border: 3px solid #2d4df1;
@@ -73,7 +88,7 @@
         color: #f0f0f0;
         border: 1.5px solid #222;
         border-radius: 14px;
-        box-shadow: 0 1px 4px 0 rgba(0,255,255,0.04);
+        box-shadow: none;
         transition: border 0.2s;
     }
     .form-control:focus {
