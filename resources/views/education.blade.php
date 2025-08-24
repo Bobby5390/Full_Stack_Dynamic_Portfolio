@@ -668,12 +668,12 @@
     <h2>My Education</h2>
     <div class="edu-boxes">
       <a href="https://daffodilvarsity.edu.bd/" target="_blank" class="edu-box" rel="noopener">
-        <img src="https://studentshub.daffodilvarsity.edu.bd/assets/img/about/1719679319.jpeg" alt="DIU">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnemrjeD1Z-aEv8M6XpAK9hwFRaMJ06Vo8IA&s" alt="DIU">
         <h3>Daffodil International University</h3>
         <p>B.Sc in Computer Science & Engineering (2022 - Present)</p>
       </a>
       <a href="https://www.gpcpsc.edu.bd/" target="_blank" class="edu-box" rel="noopener">
-        <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4np95vCidc9in04DkXUIZQmvo7YS9_jaMzykvNmdCpt5XJSYKWPYUR_3o3QC1yi0SkNAZz9KSN1pH-_DPdJIlPK29d3nIrr64CPbUwMRoC-xB3b3taG43Wghdm5rL-EP5CfkkrnZ=s1360-w1360-h1020-rw" alt="HSC">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSADTjDwrtgI3VzcYEV_1Vomsq1sdr3zRmQiQ&s" alt="HSC">
         <h3>HSC - Gazipur Cantonment College</h3>
         <p>(2018 - 2020)</p>
       </a>

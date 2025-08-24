@@ -5,13 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">        .stat-label {
-            color: rgba(240, 240, 240, 0.8);
-            font-size: 1.1rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        } <style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
         :root {
             --primary: #2d4df1;
             --accent: #00bcd4;
@@ -687,14 +682,7 @@
         <i class="fas fa-bars"></i>
     </button>
 
-    <!-- Logout Button -->
-    <form method="POST" action="{{ route('logout') }}" class="logout-btn">
-        @csrf
-        <button type="submit" class="btn btn-secondary">
-            <i class="fas fa-sign-out-alt"></i>
-            Logout
-        </button>
-    </form>
+
 
     <div class="dashboard-container">
         <!-- Sidebar -->
@@ -750,6 +738,15 @@
                             View Portfolio
                         </a>
                     </li>
+                </ul>
+                <!-- Logout Button at the bottom of sidebar -->
+                <form method="POST" action="{{ route('logout') }}" style="position: absolute; bottom: 2rem; left: 0; width: 100%; padding: 0 2rem;">
+                    @csrf
+                    <button type="submit" class="btn btn-secondary" style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </button>
+                </form>
                 </ul>
             </nav>
         </aside>
