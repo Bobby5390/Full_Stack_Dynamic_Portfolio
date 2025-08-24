@@ -38,6 +38,7 @@ Route::post('/logout', [AuthenticationController::class, 'logout'])->name('logou
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
+    Route::post('/profile', [DashboardController::class, 'updateProfile'])->name('admin.profile.update');
     Route::get('/analytics', [DashboardController::class, 'analytics'])->name('admin.analytics');
 
     // CRUD routes for portfolio sections
